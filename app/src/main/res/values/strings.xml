@@ -24,4 +24,7 @@
     <string name="product_disc_price">Rp 27.000</string>
 
     <string name="save">Save</string>
+    <string name="update">Update</string>
+    <string name="form_store">Form Store</string>
+    <string name="form_product">Form Product</string>
 </resources>
