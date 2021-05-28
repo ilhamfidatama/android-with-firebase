@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/store_image"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_store" />
+
+    <TextView
+        android:id="@+id/store_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/store_name"
+        android:theme="@style/Heading_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/store_image"
+        app:layout_constraintTop_toTopOf="@+id/store_image" />
+
+    <TextView
+        android:id="@+id/store_address_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/store_address"
+        android:theme="@style/Heading_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/store_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/store_name_tv" />
+
+    <TextView
+        android:id="@+id/store_products_tv"
+        style="@style/Heading_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/store_products"
+        app:layout_constraintBottom_toBottomOf="@+id/store_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/store_address_tv"
+        app:layout_constraintTop_toBottomOf="@+id/store_address_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
