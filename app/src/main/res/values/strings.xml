@@ -20,4 +20,6 @@
     <string name="product_price">Rp 30.000</string>
     <string name="product_discount">10%</string>
     <string name="product_disc_price">Rp 27.000</string>
+
+    <string name="save">Save</string>
 </resources>
