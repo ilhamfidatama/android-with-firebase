@@ -18,7 +18,9 @@
     <!--  products  -->
     <string name="product_name">Product Name</string>
     <string name="product_price">Rp 30.000</string>
+    <string name="product_price_tittle">Product Price</string>
     <string name="product_discount">10%</string>
+    <string name="product_disc">Product Discount</string>
     <string name="product_disc_price">Rp 27.000</string>
 
     <string name="save">Save</string>
