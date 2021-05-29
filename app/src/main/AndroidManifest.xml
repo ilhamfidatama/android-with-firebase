@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidWithFirebase">
-        <activity android:name=".FormProductActivity"></activity>
+        <activity android:name=".FormProductActivity" />
         <activity android:name=".FormStoreActivity" />
         <activity android:name=".StoreActivity" />
         <activity
