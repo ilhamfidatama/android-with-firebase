@@ -1,38 +1,30 @@
 package com.ilhamfidatama.androidwithfirebase
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.ilhamfidatama.androidwithfirebase.adapter.StoreAdapter
+import com.ilhamfidatama.androidwithfirebase.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+    private val adapter = StoreAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        findViewById<FloatingActionButton>(R.id.store_add_fab).setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
-    }
+        binding.storeRv.adapter = adapter
+        binding.storeRv.layoutManager = LinearLayoutManager(this)
+        binding.storeRv.setHasFixedSize(true)
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
+        binding.storeAddFab.setOnClickListener {
+            val intent = Intent(this, FormStoreActivity::class.java)
+            intent.putExtra(Utils.ADD_MODE, true)
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
+            startActivity(intent)
         }
     }
 }
