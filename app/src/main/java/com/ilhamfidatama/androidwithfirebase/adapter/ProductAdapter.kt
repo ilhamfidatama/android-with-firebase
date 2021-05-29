@@ -35,7 +35,7 @@ class ProductAdapter: RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
             binding.root.setOnClickListener {
                 val intent = Intent(binding.root.context, FormProductActivity::class.java)
-                intent.putExtra(Utils.DATA, product)
+//                intent.putExtra(Utils.DATA, product)
                 intent.putExtra(Utils.ADD_MODE, false)
 
                 binding.root.context.startActivity(intent)

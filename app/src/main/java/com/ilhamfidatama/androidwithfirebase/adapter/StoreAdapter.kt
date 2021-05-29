@@ -31,7 +31,7 @@ class StoreAdapter: RecyclerView.Adapter<StoreAdapter.StoreViewHolder>() {
 
             binding.root.setOnClickListener {
                 val intent = Intent(binding.root.context, StoreActivity::class.java)
-                intent.putExtra(Utils.DATA, store)
+//                intent.putExtra(Utils.DATA, store)
 
                 binding.root.context.startActivity(intent)
             }
